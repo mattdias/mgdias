@@ -8,13 +8,11 @@ layout: default
 
       {% for post in site.posts %}
 
-        <article style="padding-bottom: 30px;" class="posts__post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        <article style="padding-bottom: 50px;" class="posts__post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <a class="posts__link" href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
           
           {% if post.image %}
-            <figure class="posts__img">
               <img src="{{ post.image }}" alt="{{ post.title }}" data-aos="fade-in" itemprop="image"/>
-            </figure>
           {% endif %}
 
           {% if post.youtube %}
@@ -22,7 +20,7 @@ layout: default
           {% endif %}
 
           <div >
-            <strong itemprop="name">{{ post.title }}</strong> — <span itemprop="description">{{ post.content | strip_html | truncatewords: 35, "" }}</span>
+            <strong itemprop="name">{{ post.title }}</strong> — <span itemprop="description" style="color:#555;">{{ post.content | strip_html | truncatewords: 35, "" }}</span>
           </div>
 
         </a>
