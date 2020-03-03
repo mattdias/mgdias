@@ -172,6 +172,8 @@ strong {
 section {
 padding-top: 70px;
 margin-left:140px;
+background-color: #fff;
+z-index: 10;
 }
 
 small {
@@ -210,7 +212,9 @@ footer {
   }
 
   section {
-    margin:0 0 20px;
+    margin:0 0 30px;
+    background-color: #fff;
+    z-index: 10;
   }
 
   header a small {
