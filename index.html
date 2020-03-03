@@ -8,7 +8,7 @@ layout: default
 
       {% for post in site.posts %}
 
-        <article class="posts__post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        <article style="padding-bottom: 30px;" class="posts__post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <a class="posts__link" href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
           
           {% if post.image %}
@@ -21,8 +21,8 @@ layout: default
             <iframe src="{{ post.youtube }}" frameborder="0" width="100%" height="350" allowfullscreen="allowfullscreen"></iframe>      
           {% endif %}
 
-          <div>
-            <h2 class="posts__text"><strong itemprop="name">{{ post.title }}</strong> — <span itemprop="description">{{ post.content | strip_html | truncatewords: 35, "" }}</span></h2>
+          <div >
+            <strong itemprop="name">{{ post.title }}</strong> — <span itemprop="description">{{ post.content | strip_html | truncatewords: 35, "" }}</span>
           </div>
 
         </a>
