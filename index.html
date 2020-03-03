@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div class="posts" >
+  <div class="grid-xlarge">
+    <div class="posts__container" itemscope itemtype="http://schema.org/Blog" data-columns>
+
+      {% for post in site.posts %}
+
+        <article class="posts__post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        <a class="posts__link" href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
+          
+          {% if post.image %}
+            <figure class="posts__img">
+              <img src="{{ post.image }}" alt="{{ post.title }}" data-aos="fade-in" itemprop="image"/>
+            </figure>
+          {% endif %}
+
+          {% if post.youtube %}
+            <iframe src="{{ post.youtube }}" frameborder="0" width="100%" height="350" allowfullscreen="allowfullscreen"></iframe>      
+          {% endif %}
+
+          <div>
+            <h2 class="posts__text"><strong itemprop="name">{{ post.title }}</strong> — <span itemprop="description">{{ post.content | strip_html | truncatewords: 35, "" }}</span></h2>
+          </div>
+
+        </a>
+      </article>
+
+      {% endfor %}
+
+      </div>
+    </div>
+  </div>
+
+
